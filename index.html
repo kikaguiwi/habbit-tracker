@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>🌿 Habit Flame — трекер привычек</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2b0e9c6cf.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="left">
+        <h1>🌱 Habit Flame</h1>
+        <p class="subtitle">Создавай привычки, отслеживай прогресс и смотри, как растёт твой огонёк</p>
+      </div>
+      <div class="right">
+        <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="creation">
+        <input id="habit-name" type="text" placeholder="Новая привычка (например: бегать)..." />
+        <button id="add-btn"><i class="fas fa-plus"></i> Добавить</button>
+      </section>
+
+      <section id="habit-list" class="list">
+        <!-- JS вставляет карточки привычек сюда -->
+      </section>
+
+      <section class="ai-row">
+        <div class="ai-card">
+          <h3>🤖 Совет от ИИ</h3>
+          <input id="user-input" type="text" placeholder="Напиши, что мешает (например: 'мне лень утром')" />
+          <button id="ai-btn">Получить совет</button>
+          <p id="ai-response" class="ai-output">Совет появится здесь...</p>
+        </div>
+      </section>
+
+      <section class="progress-section">
+        <h3>📈 Прогресс по привычкам</h3>
+        <canvas id="progress-chart" width="400" height="200"></canvas>
+      </section>
+    </main>
+
+    <footer>
+      <span>Создано с ❤️ — твой трекер привычек</span>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
